@@ -14,21 +14,11 @@
     }
 
     filteredCoffees.value = coffeeList.value.filter(coffee => coffee.available);
-  },
-  {
-    immediate: false,
-  }
-  )
+  });
 
   onBeforeMount(async () => {
     coffeeList.value = await fetchItems();
     filter.value = 'all';
-
-    console.log({
-      coffeeList: coffeeList.value,
-      available: coffeeList.value.filter(coffee => coffee.available),
-      filteredCoffees: filteredCoffees.value
-    })
   });
 
   const fetchItems = async function(){

@@ -1,5 +1,7 @@
 <script setup>
     import { computed } from 'vue';
+    import starFill from '@/assets/Star_fill.svg';
+    import star from '@/assets/Star.svg';
 
     const { coffee } = defineProps({
         coffee: {
@@ -10,8 +12,8 @@
 
     const ratingImage = computed(() => {
         return coffee.rating && coffee.votes
-            ? '/src/assets/Star_fill.svg'
-            : '/src/assets/Star.svg';
+            ? starFill
+            : star;
     });
 
 </script>
