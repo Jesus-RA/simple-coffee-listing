@@ -72,7 +72,7 @@ article{
         color: var(--background);
         text-align: center;
         font-weight: 600;
-        font-size: 12px;
+        font-size: 0.625rem;
     }
 
     p{
@@ -94,7 +94,7 @@ article{
         padding: 3px 8px;
         border-radius: 5px;
 
-        font-size: 14px;
+        font-size: 0.75rem;
     }
 
     .rating{
