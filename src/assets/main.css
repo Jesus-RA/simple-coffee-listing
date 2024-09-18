@@ -12,6 +12,7 @@
 
 body{
   font-family: 'DM Sans';
+  font-size: 1rem;
   background-color: var(--background);
   color: var(--font-color);
 
@@ -25,7 +26,8 @@ body{
 }
 
 main{
-  margin-top: 18%;
+  margin-top: 12%;
+  margin-inline: auto;
 
   display: flex;
   flex-direction: column;
@@ -40,7 +42,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
+    row-gap: 15px;
 
     position: relative;
     &::before{
@@ -54,13 +56,14 @@ main{
     h1{
       margin: 0;
       z-index: 1;
-      font-weight: 600;
+      font-weight: 500;
+      font-size: 2rem;
     }
 
     p{
       text-align: center;
-      width: 50%;
-      margin: 0 auto; 
+      margin: 0 auto;
+      margin: 0;
       color: var(--gray);
 
       z-index: 1;
@@ -80,23 +83,44 @@ main{
 
       border: none;
       border-radius: 5px;
+      transition: .2s linear;
     }
 
     button.active{
       background-color: var(--gray);
     }  
-
-    
+ 
   }
 
   .coffee-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     column-gap: 30px;
     row-gap: 60px;
   }
 }
 
-section {
+@media (width > 1024px){
+  header {
+    p{
+      width: 50%;
+    }
+  }
 
+  main {
+    width: 70%;
+  }
+
+  .coffee-grid{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (width <= 1024px){
+  main{
+    width: 50%;
+  }
+
+  .coffee-grid{
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
 }
